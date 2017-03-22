@@ -12,3 +12,6 @@ class Note(models.Model):
 
     class Meta:
         db_table = 'tbl_note'
+
+    def __str__(self):
+        return '{0} - {1}'.format(self.id, self.title)
